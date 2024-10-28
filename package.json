@@ -46,6 +46,7 @@
     "cors": "^2.8.5",
     "eslint-plugin-prettier": "^5.2.1",
     "express": "^4.21.1",
+    "inputmask": "^5.0.9",
     "normalize.css": "^8.0.1"
   },
   "lint-staged": {
