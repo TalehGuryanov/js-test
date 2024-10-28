@@ -1,3 +1,6 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .container__title {
   margin: 0 0 30px;
 }
@@ -93,5 +96,54 @@
 
   [data-status="pending"] & {
     display: block;
+  }
+}
+
+.container__modal {
+  @include modal;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: all .2s;
+
+  [data-modal-open] & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.container__modal-inner {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.container__modal-header {
+  position: relative;
+  margin: 0 0 30px;
+}
+
+.container__modal-header-title {
+  text-align: center;
+  margin: 0;
+}
+
+.container__modal-header-close {
+  position: absolute;
+  font-size: 20px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: .8;
   }
 }

@@ -7,6 +7,8 @@ const formFields = document.querySelectorAll("[data-form-field]");
 const formFieldErrors = document.querySelectorAll("[data-form-field-error]");
 const resultText = document.querySelector("[data-result-text]");
 const resultAction = document.querySelector("[data-result-action]");
+const modal = document.querySelector("[data-modal]");
+const modalToggleButtons = document.querySelectorAll("[data-modal-toggle]");
 
 const emailFiledIndex = Array.from(formFields).findIndex(
   (field) => field.name === "email",
@@ -103,5 +105,20 @@ const resetFilersError = () => {
   });
 };
 
+const initModal = () => {
+  modalToggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      document.body.toggleAttribute("data-modal-open");
+    });
+  });
+
+  document.body.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      document.body.removeAttribute("data-modal-open");
+    }
+  });
+};
+
 initPhoneMask();
 resetFilersError();
+initModal();

@@ -10,6 +10,7 @@
 <body>
   <div class="container">
     <h1 class="container__title">Hello</h1>
+    <button class="container__button" data-modal-toggle>Open Modal</button>
     
     <main class="container__main" data-main>
       <form action="" class="container__form" novalidate data-form>
@@ -48,6 +49,17 @@
       
       <div class="container__spinner loader" data-loader></div>
     </main>
+    
+    <div class="container__modal" data-modal>
+      <div class="container__modal-inner">
+        <div class="container__modal-header">
+          <h2 class="container__modal-header-title">Modal Header</h2>
+          <button class="container__modal-header-close" data-modal-toggle aria-label="close modal">x</button>
+        </div>
+        
+        <div class="container__modal-body" data-modal-toggle>Modal Body</div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
