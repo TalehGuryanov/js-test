@@ -1,7 +1,16 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
+.container {
+  @include container;
+}
+
 .container__title {
+  margin: 0 0 30px;
+}
+
+.container__button {
+  @include button;
   margin: 0 0 30px;
 }
 
@@ -64,6 +73,7 @@
 }
 
 .container__form-submit {
+  @include button;
   margin: 0 0 0 auto;
 }
 
@@ -91,7 +101,13 @@
   }
 }
 
+.container__result-action {
+  @include button;
+}
+
 .container__spinner {
+  @include spinner;
+
   display: none;
 
   [data-status="pending"] & {

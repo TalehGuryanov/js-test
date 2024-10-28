@@ -16,11 +16,3 @@ body {
   }
 }
 
-.container {
-  @include container;
-}
-
-.loader {
-  @include spinner;
-}
-

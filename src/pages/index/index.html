@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
@@ -16,25 +17,25 @@
       <form action="" class="container__form" novalidate data-form>
         <div class="container__form-block">
           <label for="name" class="container__form-label">Your Name</label>
-          <input data-form-field type="text" name="name" id="name" class="container__form-field" placeholder="name" value="">
+          <input data-form-field type="text" name="name" id="name" class="container__form-field" placeholder="name">
           <div class="container__form-error" data-form-field-error>This field is required</div>
         </div>
         
         <div class="container__form-block">
           <label for="email" class="container__form-label">Your Email</label>
-          <input data-form-field type="email" name="email" id="email" class="container__form-field" placeholder="email" value="">
+          <input data-form-field type="email" name="email" id="email" class="container__form-field" placeholder="email">
           <div class="container__form-error" data-form-field-error>This field is required</div>
         </div>
         
         <div class="container__form-block">
           <label for="phone" class="container__form-label">Your Phone</label>
-          <input data-form-field type="text" name="phone" id="phone" class="container__form-field" placeholder="+375 (__) ___-__-__" value="" autocomplete="off">
+          <input data-form-field type="text" name="phone" id="phone" class="container__form-field" placeholder="+375 (__) ___-__-__" autocomplete="off">
           <div class="container__form-error" data-form-field-error>This field is required</div>
         </div>
         
         <div class="container__form-block">
           <label for="message" class="container__form-label">Message</label>
-          <textarea data-form-field rows="7" type="text" name="message" id="message" class="container__form-field" placeholder="message" value=""></textarea>
+          <textarea data-form-field rows="7" type="text" name="message" id="message" class="container__form-field" placeholder="message"></textarea>
           <div class="container__form-error" data-form-field-error>This field is required</div>
         </div>
         
@@ -47,7 +48,7 @@
         <button type="button" data-result-action class="container__result-action">Try Again</button>
       </div>
       
-      <div class="container__spinner loader" data-loader></div>
+      <div class="container__spinner" data-loader></div>
     </main>
     
     <div class="container__modal" data-modal>
